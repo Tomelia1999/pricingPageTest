@@ -19,35 +19,43 @@ export default function Pricing() {
         onToggle={() => setIsDarkMode(!isDarkMode)} 
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <Header 
-          isDarkMode={isDarkMode}
-          isYearly={isYearly}
-          onBillingToggle={setIsYearly}
-        />
+      {/* Pricing Section with different background */}
+      <div className={`transition-colors duration-300 ${isDarkMode ? 'bg-[#0c121a]' : 'bg-gray-50'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <Header 
+            isDarkMode={isDarkMode}
+            isYearly={isYearly}
+            onBillingToggle={setIsYearly}
+          />
 
-        {/* Pricing Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16 items-start">
-          {basePlans.map((plan, index) => (
-            <PricingCard
-              key={plan.name}
-              plan={plan}
-              index={index}
-              isDarkMode={isDarkMode}
-              isYearly={isYearly}
-              hoveredPlan={hoveredPlan}
-              onMouseEnter={setHoveredPlan}
-              onMouseLeave={() => setHoveredPlan(null)}
-            />
-          ))}
+          {/* Pricing Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16 items-start">
+            {basePlans.map((plan, index) => (
+              <PricingCard
+                key={plan.name}
+                plan={plan}
+                index={index}
+                isDarkMode={isDarkMode}
+                isYearly={isYearly}
+                hoveredPlan={hoveredPlan}
+                onMouseEnter={setHoveredPlan}
+                onMouseLeave={() => setHoveredPlan(null)}
+              />
+            ))}
+          </div>
+
+          {/* Detailed Pricing Table */}
+          <DetailedPricingTable isDarkMode={isDarkMode} />
         </div>
+      </div>
 
-        {/* Detailed Pricing Table */}
-        <DetailedPricingTable isDarkMode={isDarkMode} />
-
-        <FAQ isDarkMode={isDarkMode} />
-
-        <ContactCTA isDarkMode={isDarkMode} />
+      {/* FAQ and Contact Section with original background */}
+      <div className={`transition-colors duration-300 ${isDarkMode ? 'bg-[#0c121a]' : 'bg-white'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <FAQ isDarkMode={isDarkMode} />
+          
+          <ContactCTA isDarkMode={isDarkMode} />
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import { useState } from "react";
 import DarkModeToggle from "@/components/DarkModeToggle";
 import Header from "@/components/Header";
 import PricingCard from "@/components/PricingCard";
-import DetailedPricingTable from "@/components/DetailedPricingTable";
+import ImportantNotes from "@/components/DetailedPricingTable";
 import FAQ from "@/components/FAQ";
 import ContactCTA from "@/components/ContactCTA";
 import { basePlans } from "@/plans";
@@ -44,8 +44,8 @@ export default function Pricing() {
             ))}
           </div>
 
-          {/* Detailed Pricing Table */}
-          <DetailedPricingTable isDarkMode={isDarkMode} />
+          {/* Important Notes */}
+          <ImportantNotes isDarkMode={isDarkMode} />
         </div>
       </div>
 

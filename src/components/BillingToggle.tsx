@@ -38,7 +38,7 @@ export default function BillingToggle({ isYearly, onToggle, isDarkMode }: Billin
         }`}
       >
         Yearly
-        <Badge className="absolute -top-2 -right-2 bg-[#ef6000] text-white text-xs px-1.5 py-0.5">
+        <Badge className="absolute -top-3 -right-3 bg-[#ef6000] text-white text-xs px-1.5 py-0.5 shadow-lg z-10 whitespace-nowrap">
           10% OFF
         </Badge>
       </button>

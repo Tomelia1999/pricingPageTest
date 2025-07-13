@@ -9,7 +9,7 @@ import { basePlans } from "@/plans";
 
 export default function Pricing() {
   const [hoveredPlan, setHoveredPlan] = useState<number | null>(null);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [isYearly, setIsYearly] = useState(true); // Default to yearly
 
   return (

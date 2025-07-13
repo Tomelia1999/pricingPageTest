@@ -27,7 +27,7 @@ export default function Pricing() {
         />
 
         {/* Pricing Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16 items-start">
           {basePlans.map((plan, index) => (
             <PricingCard
               key={plan.name}

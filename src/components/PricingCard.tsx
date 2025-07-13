@@ -68,20 +68,20 @@ export default function PricingCard({
             : 'border-gray-200'
       } ${
         isDarkMode ? 'bg-gray-800' : 'bg-white'
-      }`}
+      } ${plan.popular ? 'mt-4' : ''}`}
       onMouseEnter={() => onMouseEnter(index)}
       onMouseLeave={onMouseLeave}
     >
       {plan.popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <Badge className="bg-[#ef6000] text-white px-4 py-1 text-sm font-medium">
-            <Star className="w-3 h-3 mr-1" />
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+          <Badge className="bg-[#ef6000] text-white px-3 py-1.5 text-sm font-medium shadow-lg flex items-center whitespace-nowrap">
+            <Star className="w-3 h-3 mr-1.5 fill-current" />
             Most Popular
           </Badge>
         </div>
       )}
 
-      <CardHeader className="text-center pb-4">
+      <CardHeader className={`text-center pb-4 ${plan.popular ? 'pt-6' : ''}`}>
         <h3 className={`text-xl font-bold mb-2 transition-colors duration-300 ${
           isDarkMode ? 'text-white' : 'text-black'
         }`}>

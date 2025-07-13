@@ -26,7 +26,6 @@ export const basePlans: PricingPlan[] = [
       features: [
         "25M monthly requests included",
         "100 requests per second",
-        "Archive/Trace/Debug/WSS",
         "Dedicated support channel"
       ],
       cta: "Choose Plan",
@@ -42,7 +41,6 @@ export const basePlans: PricingPlan[] = [
       features: [
         "75M monthly requests included",
         "250 requests per second",
-        "Archive/Trace/Debug/WSS",
         "Dedicated support channel"
       ],
       cta: "Choose Plan",
@@ -58,7 +56,6 @@ export const basePlans: PricingPlan[] = [
       features: [
         "250M monthly requests included",
         "500 requests per second",
-        "Archive/Trace/Debug/WSS",
         "Dedicated support channel"
       ],
       cta: "Choose Plan",

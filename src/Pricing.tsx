@@ -49,8 +49,8 @@ export default function Pricing() {
         </div>
       </div>
 
-      {/* FAQ and Contact Section with original background */}
-      <div className={`transition-colors duration-300 ${isDarkMode ? 'bg-[#0c121a]' : 'bg-white'}`}>
+      {/* FAQ and Contact Section with enhanced background */}
+      <div className={`transition-colors duration-300 ${isDarkMode ? 'bg-gray-900' : 'bg-slate-100'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <FAQ isDarkMode={isDarkMode} />
           
